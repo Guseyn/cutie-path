@@ -1,0 +1,29 @@
+{
+  "name": "@guseyn/cutie-path",
+  "version": "1.0.0",
+  "description": "Cutie extension for path module in Node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test-executor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guseyn/cutie-path.git"
+  },
+  "keywords": [
+    "cutie",
+    "path"
+  ],
+  "dependencies": {
+    "@guseyn/cutie": "1.4.0",
+    "@guseyn/cutie-assert": "1.1.0",
+    "@guseyn/cutie-is": "1.0.2",
+    "test-executor": "1.0.8"
+  },
+  "author": "guseyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Guseyn/cutie-path/issues"
+  },
+  "homepage": "https://github.com/Guseyn/cutie-path#readme"
+}
