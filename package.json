@@ -1,6 +1,6 @@
 {
   "name": "@guseyn/cutie-path",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cutie extension for path module in Node.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "dependencies": {
     "@guseyn/cutie": "1.4.0",
     "@guseyn/cutie-assert": "1.1.0",
-    "@guseyn/cutie-is": "1.0.2",
+    "@guseyn/cutie-is": "1.0.3",
     "test-executor": "1.0.8"
   },
   "author": "guseyn",
