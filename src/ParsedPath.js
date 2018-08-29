@@ -1,6 +1,6 @@
 'use strict'
 
-const { AsyncObject } = require('@guseyn/cutie');
+const { AsyncObject } = require('@cuties/cutie');
 const path = require('path');
 
 // Represented result is object
