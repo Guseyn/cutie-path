@@ -13,7 +13,7 @@ You can find examples of using this library in the [test directory](https://gith
 ```js
 const {
   // Needed async objects here from the table below
-} = require('@guseyn/cutie-path');
+} = require('@cuties/path');
 ```
 For more information about parameters in the async objects visit [docs of Node](https://nodejs.org/en/docs/) for <b>path</b> module.
 
@@ -31,5 +31,5 @@ For more information about parameters in the async objects visit [docs of Node](
 | `RelativePath` | `path.relative` | `from, to` | `string` |
 | `ResolvedPath` | `path.resolve` | `...paths` | `string` |
 
-[npm-image]: https://img.shields.io/npm/v/@guseyn/cutie-path.svg
-[npm-url]: https://npmjs.org/package/@guseyn/cutie-path
+[npm-image]: https://img.shields.io/npm/v/@cuties/path.svg
+[npm-url]: https://npmjs.org/package/@cuties/path
