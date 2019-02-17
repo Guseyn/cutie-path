@@ -1,0 +1,42 @@
+language: node_js
+node_js:
+- lts/*
+install: |-
+  npm ci
+  npm install -g codecov
+script: |-
+  npm run build
+  ./node_modules/.bin/nyc report --reporter lcovonly -- -R spec
+  codecov
+  log=$(git log $TRAVIS_COMMIT_RANGE --oneline)
+  echo $'**Change log:**<br/>'${log//$'\n'/<br/>}
+branches:
+  only:
+    - master
+before_deploy: |-
+  log=$(git log $TRAVIS_COMMIT_RANGE --oneline)
+  export TAG=$'v'$TRAVIS_COMMIT_MESSAGE
+  export BODY=$'**Change log:**<br/>'${log//$'\n'/<br/>}
+deploy:
+  - provider: releases
+    skip_cleanup: true
+    api_key:
+      secure: LQ8EBtWM1Tkvakat2+moK3eFqs2SInrg4b/AlMZhFOS+j9vmEVd41RNDXtmZu+pFzkng8HGwDr77QdsZCbccPwsVgaRGB/2U/lAYV1iGDDr/vRmIiFCSNmcVLkZ3YiKLIMoIvp8XDu9vsARjAWwFgOtGFyzu8Q9yIJXOaIfR2MJLmMyvUC/Ie4vfssmbAH3wugZiXUIJKO0DTQq1CERRRgRY8S+6hQfuC7qgKkQt8+JL7Xpb41bWHb9T1GijVN8PDXHUShPL5qFPjW0ty4CVhI9J1XuOHA2Lwyki8JyVXKK/iP5kUPb0oUyzsjm06X7rDD0mBym4XeqJbDsT81H5ZuA/M1Fw9LHtpbTIx8xPf0w5YNwfUcT9Y6qo9qzlfPmTcLZ2jrA3wu2AaRalymGmsawKWwqDeyerT/fJ0Uwp5Bupwsxs6gM5C0pOuVBy2kGJzV0LNqkJuPiPaUGlSEq2hf1q6w5ipOkri7AkC70buDsg4/NOOofZ3kNq5l679KO/b6a0hm42xCcbOiNJYxxog4u/nQHWL9jfPPCbvHMNWIW+d6zV8vMKAwE5ySfg9JM1X2tcf393S89V8g/IbR2UjVOuCP3+TdQCrntFW92yMJird43bsCB8ly1XPTtT+UoTx3lAg51aglGzRB5hqQtkExGZrDn6rUrA+6SZIDQ692w=
+    file: README.md
+    name: Release $TRAVIS_COMMIT_MESSAGE
+    tag_name: $TAG
+    body: $BODY
+    on:
+      repo: Guseyn/cutie-path
+      branch:
+        - master
+      condition: $TRAVIS_COMMIT_MESSAGE =~ ^([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3})$
+  - provider: npm
+    email: guseynism@gmail.com
+    api_key:
+      secure: pCbGatTH/5sYbs/lds+h8TcYuEP+Lb7JOzNU7MZwnQ6BWM3fUyBNq0Ae7eMZxzrVxahy4nNSXsFZM18Tm2NUZop4lUrk0Jh1+Uur8LqEX5g1ykyWFLOxyiD25w7gQk019+hboPxQiKVhxUu2boDbo+bom0WaVsJQ3wtF0Bs2UhnSaBGfd0vHtMc2F912qP0m7lt4cO9koW5U2p8mmVItavsa+7xnkN37rjGjBNclzl6WethZOT5Q1CdN00YeyyUBJyhai6RZL6GsstXib0imsVpTy37mUtfxxq3VkV7lZvZc78eWb4kI+sDpcBcZbx9N5iejaBOrrSwkqVyV7Eg6/5WL5sSqzR9/FMSWuinL6nSSr3QDjLGB3c1mC+oy3qF8KC4UQoL6W4Tg8o3fesc3Pq4Zb+K6gYDAj5A9ODWzImdQYc+X85KFi3ZDi8yJ9X1Nbt9kPlFHNzOUrNslqLqyAnbOMEg1breq/8De3zhddzY4ezmC9CNach9pOGy3qm3na+7pdbgNtRWfmfmm0QlzqBGuFb8PLMLkcaeNmjCGA/py5NyasfpGePLpHUiBjzlaNZJL6Wyb2732nHBqqfpA8Ir+auLkMfNo+HNe+GLf7NdenkI1gyIZ0g7F9XPnKNUNuRh3ELOCdWRxxbXb7ywPRlN2aYBgphvMmzhRTNhEtnM=
+    on:
+      repo: Guseyn/cutie-path
+      branch:
+        - master
+      condition: $TRAVIS_COMMIT_MESSAGE =~ ^([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3})$

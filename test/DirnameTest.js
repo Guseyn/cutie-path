@@ -2,10 +2,10 @@
 
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   IsString
-} = require('@cuties/is');
+} = require('@cuties/is')
 const {
   Dirname
 } = require('./../index')
@@ -16,4 +16,4 @@ new Assertion(
       './src/Direname'
     )
   )
-).call();
+).call()

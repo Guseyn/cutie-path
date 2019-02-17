@@ -2,10 +2,10 @@
 
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   IsObject
-} = require('@cuties/is');
+} = require('@cuties/is')
 const {
   ParsedPath
 } = require('./../index')
@@ -16,4 +16,4 @@ new Assertion(
       './src/ParsedPath'
     )
   )
-).call();
+).call()

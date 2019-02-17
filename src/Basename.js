@@ -1,19 +1,17 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
-const path = require('path');
+const { AsyncObject } = require('@cuties/cutie')
+const path = require('path')
 
 // Represented result is string
 class Basename extends AsyncObject {
-
-  constructor(path, ext) {
-    super(path, ext);
+  constructor (path, ext) {
+    super(path, ext)
   }
 
-  definedSyncCall() {
-    return path.basename;
+  definedSyncCall () {
+    return path.basename
   }
-
 }
 
-module.exports = Basename;
+module.exports = Basename

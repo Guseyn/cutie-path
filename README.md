@@ -1,14 +1,28 @@
 # cutie-path
 
-[![NPM Version][npm-image]][npm-url]
+[![NPM Version](https://img.shields.io/npm/v/@cuties/path.svg)](https://npmjs.org/package/@cuties/path)
+[![Build Status](https://travis-ci.org/Guseyn/cutie-path.svg?branch=master)](https://travis-ci.org/Guseyn/cutie-path)
+[![codecov](https://codecov.io/gh/Guseyn/cutie-path/branch/master/graph/badge.svg)](https://codecov.io/gh/Guseyn/cutie-path)
 
 [Cutie](https://github.com/Guseyn/cutie) extension for <b>path</b> module in Node. It's based on the [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf).
 
-# Examples
+## Examples
 
 You can find examples of using this library in the [test directory](https://github.com/Guseyn/cutie-path/tree/master/test).
 
-# Usage
+## Install
+
+`npm install @cuties/child-process`
+
+## Run test
+
+`npm test`
+
+## Run build
+
+`npm run build`
+
+## Usage
 
 ```js
 const {
@@ -30,6 +44,3 @@ For more information about parameters in the async objects visit [docs of Node](
 | `ParsedPath` | `path.parse` | `path` | `object` |
 | `RelativePath` | `path.relative` | `from, to` | `string` |
 | `ResolvedPath` | `path.resolve` | `...paths` | `string` |
-
-[npm-image]: https://img.shields.io/npm/v/@cuties/path.svg
-[npm-url]: https://npmjs.org/package/@cuties/path
