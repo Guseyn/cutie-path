@@ -1,6 +1,6 @@
 {
   "name": "@cuties/path",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cutie extension for path module in Node.",
   "main": "index.js",
   "scripts": {
