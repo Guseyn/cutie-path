@@ -12,7 +12,7 @@ You can find examples of using this library in the [test directory](https://gith
 
 ## Install
 
-`npm install @cuties/child-process`
+`npm install @cuties/path`
 
 ## Run test
 
