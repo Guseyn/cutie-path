@@ -2,10 +2,10 @@
 
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   IsBoolean
-} = require('@cuties/is');
+} = require('@cuties/is')
 const {
   IsAbsolute
 } = require('./../index')
@@ -16,4 +16,4 @@ new Assertion(
       './src/IsAbsolute'
     )
   )
-).call();
+).call()

@@ -2,10 +2,10 @@
 
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   IsString
-} = require('@cuties/is');
+} = require('@cuties/is')
 const {
   NamespacedPath
 } = require('./../index')
@@ -15,4 +15,4 @@ new Assertion(
   new IsString(
     new NamespacedPath('./src/NamespacedPath')
   )
-)///.call();
+).call()
