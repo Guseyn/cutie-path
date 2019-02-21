@@ -9,7 +9,7 @@ class JoinedPaths extends AsyncObject {
     super(...paths)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return path.join
   }
 }

@@ -9,7 +9,7 @@ class NormalizedPath extends AsyncObject {
     super(path)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return path.normalize
   }
 }

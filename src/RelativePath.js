@@ -9,7 +9,7 @@ class RelativePath extends AsyncObject {
     super(from, to)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return path.relative
   }
 }

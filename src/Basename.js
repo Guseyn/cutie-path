@@ -9,7 +9,7 @@ class Basename extends AsyncObject {
     super(path, ext)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return path.basename
   }
 }

@@ -9,7 +9,7 @@ class NamespacedPath extends AsyncObject {
     super(path)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return path.toNamespacedPath
   }
 }
