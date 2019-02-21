@@ -9,7 +9,7 @@ class Format extends AsyncObject {
     super(pathObject)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return path.format
   }
 }

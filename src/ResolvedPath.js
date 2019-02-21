@@ -9,7 +9,7 @@ class ResolvedPath extends AsyncObject {
     super(...paths)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return path.resolve
   }
 }

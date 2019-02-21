@@ -9,7 +9,7 @@ class ParsedPath extends AsyncObject {
     super(path)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return path.parse
   }
 }
